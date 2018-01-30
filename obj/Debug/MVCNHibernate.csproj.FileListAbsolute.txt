@@ -30,3 +30,35 @@ C:\Users\Juliano\Documents\Visual Studio 2012\Projects\MVCNHibernate\MVCNHiberna
 C:\Users\Juliano\Documents\Visual Studio 2012\Projects\MVCNHibernate\MVCNHibernate\bin\System.Web.Http.xml
 C:\Users\Juliano\Documents\Visual Studio 2012\Projects\MVCNHibernate\MVCNHibernate\bin\System.Web.Http.WebHost.xml
 C:\Users\Juliano\Documents\Visual Studio 2012\Projects\MVCNHibernate\MVCNHibernate\bin\MVCNHibernate.dll.config
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\MVCNHibernate.dll.config
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\MVCNHibernate.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\MVCNHibernate.pdb
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\Iesi.Collections.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\Newtonsoft.Json.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\NHibernate.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Net.Http.Formatting.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Helpers.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Http.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Http.WebHost.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Mvc.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Razor.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.WebPages.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.WebPages.Razor.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\Iesi.Collections.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\Newtonsoft.Json.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\NHibernate.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Net.Http.Formatting.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Http.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Http.WebHost.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Helpers.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Mvc.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.Razor.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.WebPages.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\bin\System.Web.WebPages.Razor.xml
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\obj\Debug\MVCNHibernate.csprojResolveAssemblyReference.cache
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\obj\Debug\MVCNHibernate.dll
+C:\Users\Juliano\Source\Repos\NewRepo\nhibernate\MVCNHibernate\MVCNHibernate\obj\Debug\MVCNHibernate.pdb

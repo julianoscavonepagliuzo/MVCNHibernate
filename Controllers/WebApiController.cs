@@ -1,6 +1,6 @@
 ﻿using MVCNHibernate.Models;
 using NHibernate;
-using NHibernate.Linq; 
+using NHibernate.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +10,43 @@ using System.Web.Http;
 
 namespace MVCNHibernate.Controllers
 {
-    [RoutePrefix("todo")]
+    [RoutePrefix("api")]
     public class WebApiController : ApiController
     {
         ISession session = NHibernateSession.OpenSession();
-        
-        [Route("all")]
-        public List<ToDo> GetListToDo()
+
+        [Route("todo")]
+        [HttpGet]
+        public IHttpActionResult GetListToDo(int page, int size)
         {
-            List<ToDo> toDo = session.Query<ToDo>().ToList();
-            return toDo;
+            List<ToDo> toDo = session.Query<ToDo>()?.ToList();
+
+            if (toDo == null || toDo.Count == default(int))
+            {
+                return Ok();
+            }
+
+            if (page < 1)
+            {
+                return BadRequest();
+            }
+
+            if (size < 1)
+            {
+                return BadRequest();
+            }
+
+            if (page == 1)
+            {
+                return Json(toDo.Take(size));
+            }
+
+            return Json(toDo.Skip((page - 1) * size).Take(size));
         }
-        
+
+        [Route("todo")]
         [HttpPost]
-        public HttpResponseMessage AddToDo(ToDo toDo)
+        public IHttpActionResult AddToDo(ToDo toDo)
         {
             try
             {
@@ -34,35 +57,48 @@ namespace MVCNHibernate.Controllers
                         session.Save(toDo);
                         transaction.Commit();
                     }
-                    return Request.CreateResponse(HttpStatusCode.OK, "Success");
+                    return Created(Url.Link("GetById", new { id = toDo.ID }), toDo);
                 }
                 else
                 {
-                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Error !");
+                    return BadRequest();
                 }
             }
             catch (Exception ex)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+                return InternalServerError(ex);
             }
         }
 
-        [Route("{id:int}")]
+        [Route("todo/{id}", Name = "GetById")]
         [HttpGet]
-        public ToDo DetailsToDo(int id)
+        public IHttpActionResult DetailsToDo(int id)
         {
             var toDo = session.Get<ToDo>(id);
-            return toDo;
+
+            if (toDo == null)
+            {
+                return NotFound();
+            }
+
+            return Json(toDo);
         }
 
+        [Route("todo")]
         [HttpPut]
-        public HttpResponseMessage UpdateToDo(ToDo toDo)
+        public IHttpActionResult UpdateToDo(ToDo toDo)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
                     var toDoObj = session.Get<ToDo>(toDo.ID);
+
+                    if (toDoObj == null)
+                    {
+                        return NotFound();
+                    }
+
                     toDoObj.Name = toDo.Name;
                     toDoObj.Description = toDo.Description;
 
@@ -71,21 +107,22 @@ namespace MVCNHibernate.Controllers
                         session.Save(toDoObj);
                         transaction.Commit();
                     }
-                    return Request.CreateResponse(HttpStatusCode.OK, "Success");
+                    return Json(toDoObj);
                 }
                 else
                 {
-                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Error !");
+                    return BadRequest();
                 }
             }
             catch (Exception ex)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+                return InternalServerError(ex);
             }
         }
-  
+
+        [Route("todo/{id}")]
         [HttpDelete]
-        public HttpResponseMessage DeleteToDo(int id)
+        public IHttpActionResult DeleteToDo(int id)
         {
             try
             {
@@ -97,17 +134,17 @@ namespace MVCNHibernate.Controllers
                         session.Delete(toDo);
                         transaction.Commit();
                     }
-                    return Request.CreateResponse(HttpStatusCode.OK, "Success");
+                    return Ok();
                 }
                 else
                 {
-                    return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Error !");
+                    return NotFound();
                 }
             }
             catch (Exception ex)
             {
 
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+                return InternalServerError(ex);
             }
         }
     }
